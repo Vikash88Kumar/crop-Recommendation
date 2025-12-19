@@ -1,0 +1,70 @@
+.custom-header-bg {
+          background: linear-gradient(90deg, #ff9800 0%, #fd5a36 100%);
+        }
+        .custom-sidebar {
+          position: fixed;
+          bottom: 64px;
+          left: 120px;
+          width: 80%;
+          height: 80vh;
+          background: linear-gradient(150deg, #d5dedd 0%, #065147 100%);
+          color: #fff;
+          border-radius: 10px;
+          box-shadow: 2px 4px 24px #47766f80;
+          padding: 24px 0 0 0;
+          overflow-y: auto;
+          transition: transform 0.3s;
+          display: flex;
+          flex-direction: column;
+          z-index: 1000;
+        }
+        .sidebar-open {
+          transform: translateX(0);
+        }
+        .sidebar-closed {
+          transform: translateX(-1480px);
+        }
+        .sidebar-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+        }
+        .sidebar-btn {
+          width: 90%;
+          margin: 14px auto;
+          padding: 16px 10px;
+          background: linear-gradient(90deg, #ffc35b 10%, #ff7b3e 95%);
+          border: none;
+          border-radius: 18px;
+          font-size: 1.1rem;
+          font-family: 'Merriweather', serif;
+          font-weight: bold;
+          color: #4d1900;
+          cursor: pointer;
+          text-align: left;
+          transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+          box-shadow: 0 2px 10px #a62b0099;
+          text-decoration: none;
+        }
+        .sidebar-btn:hover {
+          background: linear-gradient(90deg, #fea629 30%, #fb3168 100%);
+          color: #fff;
+        }
+        .custom-overlay {
+          position: fixed;
+          top: 0; left: 0; width: 100vw; height: 100vh;
+          background: rgba(0,0,0,0.25);
+          z-index: 999;
+        }
+        @media (max-width: 600px) {
+          .custom-sidebar {
+            width: 90vw;
+            min-width: 150px;
+            max-width: 340px;
+            border-radius: 0 18px 18px 0;
+          }
+          .sidebar-closed {
+            transform: translateX(-100vw);
+          }
+        }
